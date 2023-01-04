@@ -1,0 +1,419 @@
+@font-face {
+	font-family: 'WeissRunD';
+    font-weight: 700;
+	font-style: italic;
+	src: url(‘/41107_WeissRunD.ttf’) format(‘truetype’)
+}
+
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    background-color: #BBA7A7;
+    padding: 8px 8px 10px 8px;
+    width: 100%;
+}
+
+.head{
+    width:100%;
+    height: 100%;
+    background-color: #BBA7A7;
+}
+
+.navbar ul{
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding-left: 10px;
+    width: 30%;
+    
+}
+
+.navbar a{
+    width: 10%;
+    text-align: center;
+}
+
+.logo_title{ 
+    font-family:fantasy;
+    margin: 0;
+    padding-top: 8px;
+}
+
+.navbar ul li a{
+    padding: 8px;
+    color: black;
+    margin: 0 6px;
+    font-size: 19px;
+}
+
+.navbar ul li a:hover{
+    color: rgb(103, 148, 131);
+    transition: 0.5s;
+    letter-spacing: 3px;
+    text-align: center;
+
+}
+
+.barSearch{
+    padding: 0;
+    display:flex;
+    width: 400px;
+    height: 40px;
+    background-color: #D8C4C4;
+    border-radius: 19px;
+    width: 35%;
+}
+
+.barSearch:focus{
+    border: 5px ridge green;
+}
+
+.imgsrch{
+    width: 22px;
+    height: 70%;
+    margin: 15% 0 15% 15px;
+}
+
+.search{
+    margin-right: 15px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: none;
+    background-color: #D8C4C4;
+    padding-left: 15px;
+    font-size: 15px;
+
+}
+
+.contener{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding-top: 58px;
+    display:flex;
+}
+
+.menu{
+    width: 12%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    background-color: #BBA7B7;
+}
+
+.menu a{
+    display: list-item;
+    font-size: 15px;
+    color: black;
+    padding: 5px 3px;
+}
+
+div.barreH{
+    width: 80%;
+    height: 2px;
+    margin: 0 10%;
+    background-color: black;
+}
+
+.menu a:hover{
+    color: rgb(103, 148, 131);
+    background-color: #D8C4C4;
+    border-radius: 15px;
+    transition: 0.5s;
+    letter-spacing: 1.5px;
+}
+
+.blocBout{
+    display:flex;
+    justify-content: space-between;
+    background-color: darkseagreen;
+    box-shadow: 10px 5px 5px #8F5353;
+    margin: 3px;
+}
+.boutt{
+    margin: 0 10px;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    padding: 2% 15%;
+    display: flex;
+    justify-content: space-between;
+}
+.create{
+    background-color: rgb(139, 223, 13);
+    padding: 5px;
+    font-size: 17px;
+    border-radius: 15px;
+    border: 3px groove green;
+}
+.create:active{
+    border : 3px inset green;
+    font-size : 15px;
+    letter-spacing : 0.3px;
+}
+.annul_next{
+    height: 20%;
+    margin: 2% 0;
+}
+.delete{
+    background-color: rgb(197, 52, 52);
+    padding: 5px;
+    font-size: 17px;
+    border: 3px groove red;
+    border-radius: 15px;
+}
+.delete:active{
+    border : 3px inset red;
+    font-size : 15px;
+    letter-spacing : 0.3px;
+}
+.titl{
+    display: inline-block;
+    max-width: 150px;
+    width: 50%;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 22px;
+    text-align: center;
+
+}
+
+.corps{
+    width: 100%;
+    margin-left: 12%;
+    background-color: #F2F2F2;
+    font-size: 17px;
+}
+
+/* Section gestions classes*/
+.LstClass{
+    margin-top: 25px;
+}
+.Eltclas{
+    margin: 5px 3px;
+    padding: 10px 12px;
+    border-radius: 15px;
+}
+.Eltclaspls{
+    display: flex;
+}
+div.barreHvc{
+    width: 100%;
+    height: 2px;
+    margin: 0 10% 0 0;
+    background-color: #BBA7A7;
+}
+
+/*Confirmation de supression     href="{% url 'deleteClasses' %}"*/  
+.bloc-confirm{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.confirm1{
+    display: block;
+}
+.confirm-main1{
+    width: 200px;
+    max-height: 100px;
+    width: 20%;
+    height: 100%;
+    border-radius: 18px;
+    margin: 260px 45%;
+    text-align: center;
+    font-size: 19px;
+    background-color: #CFC1C1;
+}
+
+.confirm2{
+    display: none;
+}
+.uu{
+    position: relative;
+    height: 100%;
+}
+.confirm-main2{
+    width: 25%;
+    height: 40%;
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 18px;
+    text-align: center;
+    margin:15% 40%;
+    font-size: 18px;
+    background-color: #CFC1C1;
+}
+.confirm-header{
+    margin: 0 10px;
+    padding-top: 15px;
+    height: 20%;
+    /*background-color: darkgoldenrod;*/
+}
+.confirm-section{
+    height: 20%;
+    margin: 30px 0;
+    padding: 0 15px;
+    /*background-color: chartreuse;*/
+}
+.confirm-footer{
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+    /*background-color: #BBA7A7*/
+}
+.bout{
+    margin: 5px 15px;
+    border-radius: 10px;
+    height: 25px;
+}
+.confirmCC{
+    background-color: #c96615;
+    border: 3px groove #c96615;
+}
+.confirmCC:active{
+    border : 3px inset #c96615;
+    font-size : 12px;
+    letter-spacing : 0.3px;
+}
+.annnulCC{
+    background-color: #928f8c;
+    border: 3px groove #928f8c;
+}
+.annnulCC:active{
+    border : 3px inset #928f8c;
+    font-size : 12px;
+    letter-spacing : 0.3px;
+}
+/* Saisie des infos sur une classe */
+.formclass{
+    padding-bottom: 10%;
+}
+.SSCLSS{
+    display: flex;
+    margin: 20px 0px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+
+}
+.entCclss{
+    margin-top:70px;
+}
+.entCclss input{
+    height: 25px;
+    width: 30%;
+    margin-right: 50%;
+}
+.entTclss select{
+    margin-right: 46.5%;
+    width: 35%;
+    height: 35px;
+}
+.entNclss input{
+    height: 25px;
+    width: 40%;
+    margin-right: 40%;
+}
+.entDclss textarea{
+    margin-right: 30%;
+    width: 50%;
+    height: 100px;
+    padding: 5px;
+}
+
+.formclass input, textarea, select{
+    border-radius: 9px;
+    padding: 2px 5px;
+}
+
+.formclass p{
+    margin: 2px 15px;
+    font-size: 18px;
+}
+
+.formclass input::placeholder, textarea::placeholder{
+    color: red;
+    opacity: 1;
+}
+
+div.detmodifC{
+    display: flex;
+    justify-content: space-between;
+}
+
+.listMat{
+    height: 350px;
+    overflow-y: scroll;
+    scrollbar-color: #aaa;
+    scrollbar-width:thin;
+    
+}
+.listMat::-webkit-scrollbar{
+    width: 10px;
+}
+.listMat::-webkit-scrollbar-thumb{
+    background: #aaa;
+    border-radius: 8px;
+}
+.AffMetE{
+    padding-right: 5px;
+    padding-top: 15px;
+    border-radius: 15px; 
+    margin: 0 15px; 
+    text-align: center;
+    width: 30%;
+}
+.AM{
+    background-color: rgb(143, 187, 149);
+
+}
+.AE{
+    background-color: rgb(108, 180, 162);
+
+}
+
+.photoprof{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    margin-right: 5%;
+}
+.centre{
+    display: block;
+    margin: 5px auto;
+}
+.detprof{
+    padding: 8px;
+}
+
+.titlCrsProf{
+    background-color: rgb(84, 129, 129);
+    text-align: center;
+    border: 2px dashed rgb(94, 119, 35);
+    margin: 10px 0;
+}

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="{% static 'SCOOLAPP/js/jquery.min.js' %}"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="{% static 'SCOOLAPP/css/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> {% block titre %} {% endblock %} </title>
+    </head>
+    <body>
+    <div class="bloc-confirm">
+        <div class="main" id="main">
+            <nav class="navbar"> 
+                    <a href="#">
+                        <h1 class="logo_title" id="logo_title">SCOOLAPP</h1>
+                    </a>
+                    <div class="barSearch" id="barSearch">
+                        <label><a href="#"><img src="{% static 'SCOOLAPP/images/search.png' %}" class="imgsrch"></a></label>
+                        <input type="text" id="search" class="search" placeholder="Search..." aria-label="Search">
+                    </div>
+                    <ul>
+                        <li><a href="">mon compte</a></li>
+                        <li><a href="">deconnexion</a></li>
+                    </ul>
+            </nav>
+            <div class="contener">
+                <div class="menu">
+                    <div class="barreH"></div>
+                    <a href="{% url 'Acceuil' %}">Acceuil</a>
+                    <div class="barreH"></div>
+                    <a href="{% url 'classes' %}">Gestion des classes</a>
+                    <div class="barreH"></div>
+                    <a href="{% url 'Professeurs' %}">Gestion des enseignants</a>
+                    <div class="barreH"></div>
+                    <a href="{% url 'Eleves' %}">Gestion des élèves</a>
+                    <div class="barreH"></div>
+                    <a href="{% url 'Eleves' %}">Gestion des matières</a>
+                    <div class="barreH"></div>
+                </div>
+                <div class="corps">
+                    {% block content %} {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% block content2 %} {% endblock %}
+    </div>
+
+    </body>
+    <script type="text/javascript">
+        let search = document.getElementById("search");
+        console.log(search);
+        let barSearch = document.getElementById("barSearch");
+        search.addEventListener("focus", () => {
+                search.style.backgroundColor = "#F2F2F2";
+                barSearch.style.backgroundColor = "#F2F2F2";
+                barSearch.style.border = "3px ridge black";
+        })
+        search.addEventListener("blur", () => {
+            search.style.backgroundColor = "#D8C4C4";
+            barSearch.style.backgroundColor = "#D8C4C4";
+            search.value = "";
+            barSearch.style.border = "0";
+	    })
+    </script>
+    <script type="text/javascript">
+        state = true;
+        blinklogo();
+        $(document).ready(function(){
+          setInterval(blinklogo, 400)   
+        })
+        function blinklogo(){
+            let logo = document.getElementById('logo_title')
+            if (state){ logo.style.color = '#C67373'; }
+            else{ logo.style.color = 'black';}
+            state = !state;
+
+        }
+    </script>
+</html>
